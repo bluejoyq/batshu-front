@@ -30,6 +30,15 @@ export const GlobalStyles = (): ReactElement => {
         .button {
           box-shadow: 4px 4px 6px rgba(161, 161, 161, 0.03);
         }
+        svg {
+          fill: currentColor;
+        }
+        path {
+          fill: currentColor;
+        }
+        rect {
+          fill: currentColor;
+        }
       `}
     />
   );
