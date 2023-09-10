@@ -31,10 +31,13 @@ export const GlobalStyles = (): ReactElement => {
           box-shadow: 4px 4px 6px rgba(161, 161, 161, 0.03);
         }
         svg {
-          stroke: currentColor;
+          fill: currentColor;
         }
         path {
-          stroke: currentColor;
+          fill: currentColor;
+        }
+        rect {
+          fill: currentColor;
         }
       `}
     />

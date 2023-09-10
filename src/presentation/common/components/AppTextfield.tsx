@@ -3,6 +3,24 @@ import { TextField, TextFieldProps } from "@mui/material";
 import { ReactElement } from "react";
 
 type AppTextFieldProps = TextFieldProps;
+/**
+ * 
+ * @example
+ * <AppTextField
+        placeholder={"무엇을 봣슈~?"}
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <SearchIcon
+                css={css`
+                  color: var(--icon-color);
+                `}
+              />
+            </InputAdornment>
+          ),
+        }}
+      /> 
+ */
 export const AppTextField = (props: AppTextFieldProps): ReactElement => {
   return (
     <TextField
