@@ -16,7 +16,7 @@ export const AccidentButton = (props: IconButtonProps): ReactElement => {
         background: #fff;
         box-shadow: 4px 4px 6px 0px rgba(75, 75, 75, 0.03);
 
-        .MuiTouchRipple-root span {
+        &.MuiTouchRipple-root span {
           border-radius: 8px;
         }
         &:hover {

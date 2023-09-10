@@ -13,7 +13,7 @@ export const AppBottomNavigationBar = () => {
         background: #fff;
         box-shadow: 4px 4px 6px 0px rgba(161, 161, 161, 0.03);
       `}
-      value={"홈"}
+      value={"채팅"}
     >
       <BottomNavigationAction
         label="홈"
@@ -23,6 +23,7 @@ export const AppBottomNavigationBar = () => {
       />
       <BottomNavigationAction
         label="채팅"
+        value={"채팅"}
         icon={<Message1Icon />}
         css={actionStyles}
       />
@@ -58,7 +59,7 @@ const actionStyles = css`
   svg {
     color: #c1c1c1;
   }
-  .Mui-selected {
+  &.Mui-selected {
     color: #000;
     svg {
       color: #000;

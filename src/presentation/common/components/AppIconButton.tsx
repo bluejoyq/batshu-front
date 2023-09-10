@@ -19,10 +19,10 @@ export const AppIconButton = (props: AppIconButtonProps) => {
           width: 24px;
           height: 24px;
         }
-        .MuiIconButton-sizeSmall {
+        &.MuiIconButton-sizeSmall {
           padding: 10px;
         }
-        .MuiIconButton-sizeMedium {
+        &.MuiIconButton-sizeMedium {
           padding: 14px;
         }
       `}

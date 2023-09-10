@@ -27,7 +27,7 @@ export const AppTextField = (props: AppTextFieldProps): ReactElement => {
       css={css`
         background-color: white;
         border-radius: 8px;
-        .MuiOutlinedInput-notchedOutline {
+        &.MuiOutlinedInput-notchedOutline {
           border: none;
         }
         input {
