@@ -22,27 +22,24 @@ type AppTextFieldProps = TextFieldProps;
       /> 
  */
 export const AppTextField = (props: AppTextFieldProps): ReactElement => {
-  return (
-    <TextField
-      css={css`
-        background-color: white;
-        border-radius: 8px;
-        &.MuiOutlinedInput-notchedOutline {
-          border: none;
-        }
-        input {
-          font-family: Pretendard;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-          letter-spacing: -0.41px;
-          ::placeholder {
-            color: black;
-          }
-        }
-      `}
-      {...props}
-    />
-  );
+  return <TextField css={textFieldStyles} {...props} />;
 };
+
+const textFieldStyles = css({
+  backgroundColor: "white",
+  borderRadius: 8,
+  "& .MuiOutlinedInput-notchedOutline": {
+    border: "none",
+  },
+  "& input": {
+    fontFamily: "Pretendard",
+    fontSize: 16,
+    fontStyle: "normal",
+    fontWeight: 500,
+    lineHeight: "normal",
+    letterSpacing: "-0.41px",
+    "&::placeholder": {
+      color: "black",
+    },
+  },
+});
