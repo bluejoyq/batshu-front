@@ -1,33 +1,33 @@
-import { IconButton, IconButtonProps, css } from "@mui/material";
+import { css } from "@emotion/react";
+import { IconButton, IconButtonProps } from "@mui/material";
 import { ReactElement } from "react";
 import { ReactComponent as LocationIcon } from "@/presentation/common/icons/outlined/Location Tick.svg";
+
+const buttonStyles = css({
+  width: 44,
+  height: 44,
+  flexShrink: 0,
+  borderRadius: 44,
+  background: "#121212",
+  "&:hover": {
+    background: "#1e1e1e",
+  },
+});
+
+const iconStyles = css({
+  display: "flex",
+  width: 24,
+  height: 24,
+  justifyContent: "center",
+  alignItems: "center",
+  flexShrink: 0,
+  color: "#fff",
+});
+
 export const AccidentToggleButton = (props: IconButtonProps): ReactElement => {
   return (
-    <IconButton
-      css={css`
-        width: 44px;
-        height: 44px;
-        flex-shrink: 0;
-        border-radius: 44px;
-        background: #121212;
-
-        &:hover {
-          background: #1e1e1e;
-        }
-      `}
-      {...props}
-    >
-      <LocationIcon
-        css={css`
-          display: flex;
-          width: 24px;
-          height: 24px;
-          justify-content: center;
-          align-items: center;
-          flex-shrink: 0;
-          color: #fff;
-        `}
-      />
+    <IconButton css={buttonStyles} {...props}>
+      <LocationIcon css={iconStyles} />
     </IconButton>
   );
 };

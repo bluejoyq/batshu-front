@@ -7,26 +7,23 @@ type AppIconButtonProps = IconButtonProps;
  * size = medium -> 52px
  */
 export const AppIconButton = (props: AppIconButtonProps) => {
-  return (
-    <IconButton
-      css={css`
-        background-color: #fff;
-        &:hover {
-          background-color: #f5f5f5;
-        }
-        svg {
-          color: #525252;
-          width: 24px;
-          height: 24px;
-        }
-        &.MuiIconButton-sizeSmall {
-          padding: 10px;
-        }
-        &.MuiIconButton-sizeMedium {
-          padding: 14px;
-        }
-      `}
-      {...props}
-    />
-  );
+  return <IconButton css={buttonStyles} {...props} />;
 };
+
+const buttonStyles = css({
+  backgroundColor: "#fff",
+  "&:hover": {
+    backgroundColor: "#f5f5f5",
+  },
+  "& svg": {
+    color: "#525252",
+    width: 24,
+    height: 24,
+  },
+  "&.MuiIconButton-sizeSmall": {
+    padding: 10,
+  },
+  "&.MuiIconButton-sizeMedium": {
+    padding: 14,
+  },
+});
