@@ -1,4 +1,4 @@
-import { CSSProperties, ReactElement } from "react";
+import { ReactElement } from "react";
 import { AppTextField } from "../common/components/AppTextField";
 import { Box, InputAdornment, css } from "@mui/material";
 import { ReactComponent as SearchIcon } from "@/presentation/common/icons/outlined/Search 1.svg";
@@ -10,10 +10,12 @@ import { ReactComponent as AddIcon } from "@/presentation/common/icons/outlined/
 import { ReactComponent as MinusIcon } from "@/presentation/common/icons/outlined/Minus.svg";
 import { AppBottomNavigationBar } from "../common/components/AppBottmNaviationBar";
 import KakaoMap from "../common/temp/KakaoMap";
+import { pageContentStyles } from "../common/styles/pageStyles";
+import { SerializedStyles } from "@emotion/react";
 
 export const HomePage = (): ReactElement => {
   return (
-    <Box sx={styles.container}>
+    <Box css={[styles.container, pageContentStyles]}>
       <KakaoMap />
 
       <AppTextField
@@ -48,6 +50,6 @@ export const HomePage = (): ReactElement => {
   );
 };
 
-const styles: { [key: string]: CSSProperties } = {
-  container: { position: "relative", height: "100vh" },
+const styles: { [key: string]: SerializedStyles } = {
+  container: css({ position: "relative", height: "100vh" }),
 };
